@@ -35,16 +35,10 @@ function doMath(input) {
     // Pick user number
     let firstRan = getRandomThree()
     let first = input[firstRan]
-    // console.log(`You picked item ${firstRan}`)
-    /*if (array[firstRan] === true) {
-        console.log('You won!')
-        process.exit(0) // If won initially, exit
-    }*/
     input.splice(firstRan, 1); // Remove user number from the three
 
     // Gameshow host removes one
     input.splice(getFalseIndex(input), 1)
-    // console.log(`We removed a false from the array!!`)
 
     return {
         hand: first,
